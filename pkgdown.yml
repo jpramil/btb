@@ -1,0 +1,10 @@
+pandoc: 2.14.2
+pkgdown: 2.0.6
+pkgdown_sha: ~
+articles:
+  vignette_btb: vignette_btb.html
+last_built: 2022-10-14T16:29Z
+urls:
+  reference: https://jpramil.github.io/btb/reference
+  article: https://jpramil.github.io/btb/articles
+
