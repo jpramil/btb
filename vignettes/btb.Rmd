@@ -258,7 +258,7 @@ mapsf::mf_map(x = smooth_quantiles,
 
 ## The iNeighbor parameter
 
-Here, we use simulation data which indicates the number of poor people in each househould in an island called "La Réunion".
+Here, we use data which indicates the number of poor households in squared data (200 meters) of an island called "La Réunion".
 
 Each point is the centroid of the grid used to publish aggregated data (1\ 000 meters pixels).
 
