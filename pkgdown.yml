@@ -2,8 +2,8 @@ pandoc: 2.14.2
 pkgdown: 2.0.6
 pkgdown_sha: ~
 articles:
-  vignette_btb: vignette_btb.html
-last_built: 2022-10-14T16:59Z
+  btb: btb.html
+last_built: 2022-10-20T18:09Z
 urls:
   reference: https://inseefr.github.io/btb/reference
   article: https://inseefr.github.io/btb/articles

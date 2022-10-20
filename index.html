@@ -55,13 +55,10 @@
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
 <li class="nav-item">
-  <a class="nav-link" href="reference/index.html">Reference</a>
+  <a class="nav-link" href="articles/btb.html">Get started</a>
 </li>
-<li class="nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="articles/vignette_btb.html">Spatial smoothing with BTB R package</a>
-  </div>
+<li class="nav-item">
+  <a class="nav-link" href="reference/index.html">Reference</a>
 </li>
 <li class="nav-item">
   <a class="nav-link" href="news/index.html">Changelog</a>
@@ -97,12 +94,12 @@
 <div class="section level2">
 <h2 id="description">Description<a class="anchor" aria-label="anchor" href="#description"></a>
 </h2>
-<p>The btb_smooth() function allows you to square and smooth geolocated data. It calculates a classical kernel smoothing (conservative) or a geographically weighted median. There are four major call modes of the function.</p>
+<p>The <code><a href="reference/btb_smooth.html">btb_smooth()</a></code> function allows you to square and smooth geolocated data. It calculates a classical kernel smoothing (conservative) or a geographically weighted median. There are four major call modes of the function.</p>
 <ul>
-<li>The first call mode is btb_smooth(obs, epsg, cellsize, bandwith) for a classical kernel smoothing and automatic grid.</li>
-<li>The second call mode is btb_smooth(obs, epsg, cellsize, bandwith, quantiles) for a geographically weighted median and automatic grid.</li>
-<li>The third call mode is btb_smooth(obs, epsg, cellsize, bandwith, centroids) for a classical kernel smoothing and user grid.</li>
-<li>The fourth call mode is btb_smooth(obs, epsg, cellsize, bandwith, quantiles, centroids) for a geographically weighted median and user grid.</li>
+<li>The first call mode is <code>btb_smooth(obs, epsg, cellsize, bandwith)</code> for a classical kernel smoothing and automatic grid.</li>
+<li>The second call mode is <code>btb_smooth(obs, epsg, cellsize, bandwith, quantiles)</code> for a geographically weighted median and automatic grid.</li>
+<li>The third call mode is <code>btb_smooth(obs, epsg, cellsize, bandwith, centroids)</code> for a classical kernel smoothing and user grid.</li>
+<li>The fourth call mode is <code>btb_smooth(obs, epsg, cellsize, bandwith, quantiles, centroids)</code> for a geographically weighted median and user grid.</li>
 </ul>
 </div>
 <div class="section level2">
@@ -110,20 +107,29 @@
 </h2>
 <p><code>btb</code> is available on CRAN and can therefore be readily installed</p>
 <pre><code><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"btb"</span><span class="op">)</span></span></code></pre>
-<p>It is also possible to install it from the GitHub repository using <code>devtools</code></p>
+<p>To get a bug fix or to use a feature from the development version, you can install the development version of from GitHub :</p>
 <pre><code><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"InseeFr/btb"</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
-<p>Details on how to use the package can be found in its <a href="man">documentation</a>. Some applications for spatial smoothing are presented in <a href="https://www.insee.fr/en/statistiques/fichier/3635545/imet131-l-chapitre-8.pdf" class="external-link">chapter 8</a> of the <a href="https://www.insee.fr/en/information/3635545" class="external-link">Handbook of Spatial Analysis</a> published by Insee.</p>
+<p>Details on how to use the package can be found in its <a href="man">documentation</a>. Some applications for spatial smoothing are presented in <a href="https://www.insee.fr/en/statistiques/fichier/3635545/imet131-l-chapitre-8.pdf" class="external-link">chapter 8</a> of the <a href="https://www.insee.fr/en/information/3635545" class="external-link">Handbook of Spatial Analysis</a> published by Insee. You advise you to start by consulting the <a href="https://inseefr.github.io/btb/articles/btb.html">vignette</a> of the package</p>
 </div>
 <div class="section level2">
 <h2 id="contributions">Contributions<a class="anchor" aria-label="anchor" href="#contributions"></a>
 </h2>
 <p>Maintainer: Kim Antunez <a href="mailto:antuki.kim+cran@gmail.com" class="email">antuki.kim+cran@gmail.com</a></p>
-<p>Creators, authors and contributors: - Arlindo DOS SANTOS [cre], - François SEMECURBE [cre], - Kim ANTUNEZ [aut], - Julien PRAMIL [aut] - Auriane RENAUD [ctb], - Farida MAROUCHI [ctb] - Joachim TIMOTEO [ctb]</p>
+<p>Creators, authors and contributors:</p>
+<ul>
+<li>Arlindo DOS SANTOS [cre],</li>
+<li>François SEMECURBE [cre],</li>
+<li>Julien PRAMIL [aut]</li>
+<li>Kim ANTUNEZ [ctb],</li>
+<li>Auriane RENAUD [ctb],</li>
+<li>Farida MAROUCHI [ctb]</li>
+<li>Joachim TIMOTEO [ctb]</li>
+</ul>
 </div>
 <div class="section level2">
 <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
@@ -169,7 +175,7 @@
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/jpramil/btb/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/jpramil/btb/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://github.com/InseeFr/btb/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/InseeFr/btb/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
 </ul>
 </div>
 

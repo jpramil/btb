@@ -28,14 +28,11 @@ Relie des points aux centroides des carreaux auxquels ces points appartiennent (
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="active nav-item">
-  <a class="nav-link" href="../reference/index.html">Reference</a>
+      <ul class="navbar-nav me-auto"><li class="nav-item">
+  <a class="nav-link" href="../articles/btb.html">Get started</a>
 </li>
-<li class="nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/vignette_btb.html">Spatial smoothing with BTB R package</a>
-  </div>
+<li class="active nav-item">
+  <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
 <li class="nav-item">
   <a class="nav-link" href="../news/index.html">Changelog</a>
@@ -75,7 +72,7 @@ Relie des points aux centroides des carreaux auxquels ces points appartiennent (
 <span>  offset <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0L</span>, <span class="fl">0L</span><span class="op">)</span>,</span>
 <span>  names_coords <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"x"</span>, <span class="st">"y"</span><span class="op">)</span>,</span>
 <span>  names_centro <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"x_centro"</span>, <span class="st">"y_centro"</span><span class="op">)</span>,</span>
-<span>  add <span class="op">=</span> <span class="cn">T</span></span>
+<span>  add <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -86,7 +83,7 @@ Relie des points aux centroides des carreaux auxquels ces points appartiennent (
 
 
 <dt>iCellSize</dt>
-<dd><p>:</p><ul><li><p>size of the square cells (<strong>meters</strong>)</p></li>
+<dd><p>:</p><ul><li><p>Size of the square cells (<strong>meters</strong>)</p></li>
 <li><p>Taille des côtés des carreaux (<strong>mètres</strong>)</p></li>
 </ul></dd>
 
@@ -132,16 +129,23 @@ Relie des points aux centroides des carreaux auxquels ces points appartiennent (
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">pts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span></span>
 <span class="r-in"><span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">656913.1</span> , <span class="fl">348296.3</span> , <span class="fl">842276.3</span> , <span class="fl">716750.0</span> , <span class="fl">667418.2</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">6855995</span> , <span class="fl">6788073</span> , <span class="fl">6385680</span> , <span class="fl">7003984</span> , <span class="fl">6585793</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>val<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">btb_add_centroids</span><span class="op">(</span><span class="va">pts</span>,<span class="fl">100</span>,names_centro<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"centroX"</span>,<span class="st">"centroY"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span>val <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">btb_add_centroids</span><span class="op">(</span><span class="va">pts</span>, <span class="fl">100</span>, names_centro <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"centroX"</span>, <span class="st">"centroY"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>          x       y val centroX centroY</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 656913.1 6855995   1  656950 6855950</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2 348296.3 6788073   2  348250 6788050</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3 842276.3 6385680   3  842250 6385650</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4 716750.0 7003984   4  716750 7003950</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5 667418.2 6585793   5  667450 6585750</span>
-<span class="r-in"><span><span class="va">pts2</span> <span class="op">&lt;-</span> <span class="fu">sf</span><span class="fu">::</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_as_sf.html" class="external-link">st_as_sf</a></span><span class="op">(</span><span class="va">pts</span>,coords<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"x"</span>,<span class="st">"y"</span><span class="op">)</span>,crs<span class="op">=</span><span class="fl">2154</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">btb_add_centroids</span><span class="op">(</span><span class="va">pts2</span>,<span class="fl">50</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">btb_add_centroids</span><span class="op">(</span><span class="va">pts</span>, <span class="fl">100</span>, offset <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">50</span>, <span class="fl">50</span><span class="op">)</span>, names_centro <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"centroX"</span>, <span class="st">"centroY"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>          x       y val centroX centroY</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 656913.1 6855995   1  656900 6856000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 348296.3 6788073   2  348300 6788100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 842276.3 6385680   3  842300 6385700</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 716750.0 7003984   4  716800 7004000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 667418.2 6585793   5  667400 6585800</span>
+<span class="r-in"><span><span class="va">pts2</span> <span class="op">&lt;-</span> <span class="fu">sf</span><span class="fu">::</span><span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_as_sf.html" class="external-link">st_as_sf</a></span><span class="op">(</span><span class="va">pts</span>, coords <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"x"</span>,<span class="st">"y"</span><span class="op">)</span>, crs <span class="op">=</span> <span class="fl">2154</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">btb_add_centroids</span><span class="op">(</span><span class="va">pts2</span>, <span class="fl">50</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Simple feature collection with 5 features and 5 fields</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Geometry type: POINT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Dimension:     XY</span>

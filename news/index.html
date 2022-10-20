@@ -19,13 +19,10 @@
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="nav-item">
-  <a class="nav-link" href="../reference/index.html">Reference</a>
+  <a class="nav-link" href="../articles/btb.html">Get started</a>
 </li>
-<li class="nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/vignette_btb.html">Spatial smoothing with BTB R package</a>
-  </div>
+<li class="nav-item">
+  <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
 <li class="active nav-item">
   <a class="nav-link" href="../news/index.html">Changelog</a>
@@ -52,19 +49,36 @@
 
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.2.0" id="btb-020">btb 0.2.0<a class="anchor" aria-label="anchor" href="#btb-020"></a></h2>
-<ul><li>Change <code>dfToGrid</code> name (to <code>btb_ptsToGrid</code>)</li>
+<ul><li>Change of maintainer, new authors (november 2022)</li>
+<li>Change <code>dfToGrid</code> name (to <code>btb_ptsToGrid</code>)</li>
 <li>Allow <code>btb_ptsToGrid</code> to use simple feature points as input</li>
 <li>Change <code>kernelSmoothing</code> name (to <code>btb_smooth</code>)</li>
 <li>Allow <code>btb_ptsToGrid</code> to use simple feature points as input</li>
 <li>New function to link points to their centroid in a grid (<code>btb_add_centroides</code>)</li>
-<li>Updates messages when smoothing removed (dirty in RcppLissage.cpp)</li>
+<li>Updates messages when smoothing removed (in RcppLissage.cpp)</li>
 <li>Old functions <code>dfToGrid</code> and <code>kernelSmoothing</code> replaced by warnings</li>
 <li>Possibility to use Inspire naming for grid cells (with <code>btb_add_inspire</code> function)</li>
 <li>Roxygen documentation</li>
 <li>testthat compatible tests</li>
 <li>New tests</li>
-<li>New vignette</li>
+<li>Add vignette</li>
+<li>Add pkgdown website</li>
 </ul></div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.1.8" id="btb-018">btb 0.1.8<a class="anchor" aria-label="anchor" href="#btb-018"></a></h2>
+<ul><li>add <code>iNbObsMin</code> for classical smoothing</li>
+<li>
+<code>smoothingToGrid</code> integrated in <code>kernelSmoothing</code>
+</li>
+</ul></div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.1.7" id="btb-017">btb 0.1.7<a class="anchor" aria-label="anchor" href="#btb-017"></a></h2>
+<ul><li>function <code>updateProgress</code> for <code>smoothingToGrid</code>
+</li></ul></div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.1.6" id="btb-016">btb 0.1.6<a class="anchor" aria-label="anchor" href="#btb-016"></a></h2>
+<ul><li>
+<code>iNeighbor</code> parameter</li></ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.1.19" id="btb-0119">btb 0.1.19<a class="anchor" aria-label="anchor" href="#btb-0119"></a></h2>
 <ul><li>improvement: ckecking if NA exists in coordinates and variables with a loops (faster than anyNA)</li>
@@ -111,6 +125,13 @@
 <li>check if x and y are not null</li>
 <li>encoding source files in UTF-8</li>
 </ul></div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.1.1" id="btb-011">btb 0.1.1<a class="anchor" aria-label="anchor" href="#btb-011"></a></h2>
+<ul><li>small bugs correction</li></ul></div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.1.0" id="btb-010">btb 0.1.0<a class="anchor" aria-label="anchor" href="#btb-010"></a></h2>
+<ul><li>
+<code>kernelSmoothingMedian</code> function</li></ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.0.7" id="btb-007">btb 0.0.7<a class="anchor" aria-label="anchor" href="#btb-007"></a></h2><p class="text-muted">CRAN release: 2016-08-10</p>
 <ul><li>initial release of the package</li></ul></div>
